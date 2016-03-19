@@ -18,6 +18,6 @@ class PlayScene(Scene.Scene):
         rects = self.allSprites.draw(screen)
         pygame.display.update(rects)
 
-    def onEvent(self, director, time):
+    def onEvent(self, time):
         self.Bola.actualizar(time)
         self.Bloque.actualizar(self.Bola)

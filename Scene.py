@@ -11,7 +11,7 @@ class Scene:
 		
 	def onUpdate(self):
 		raise NotImplemented("No implementado")
-	def onEvent(self):
+	def onEvent(self, time):
 		raise NotImplemented("No implementado")
 	def onDraw(self, screen):
 		raise NotImplemented("No implementado")

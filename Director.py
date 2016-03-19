@@ -3,7 +3,7 @@
 #
 
 
-import pygame, sys, config
+import pygame, sys, config, MenuScene, PlayScene
 
 class director:
 	def __init__(self):
@@ -19,7 +19,7 @@ class director:
 			for eventos in pygame.event.get():
 				if eventos.type == pygame.QUIT:
 					sys.exit(0)
-			self.scene.onEvent(self, time)
+			self.scene.onEvent(time)
 			self.scene.onUpdate()
 			self.scene.onDraw(self.screen)
 			pygame.display.flip()

@@ -14,7 +14,6 @@ class menuScene(Scene.Scene):
 		self.Play = playBttn.PlayBttn()
 		self.HS = HsBttn.HsBttn()
 		self.allThings.add(self.Play, self.HS)
-		#self.allThings.clear(pygame.display.set_mode((config.width, config.height)), self.back)
 
 	def onUpdate(self):
 		pass
@@ -23,10 +22,9 @@ class menuScene(Scene.Scene):
 		self.allThings.update()
 		rects = self.allThings.draw(screen)
 		pygame.display.update(rects)
-	def onEvent(self, director, time):
+	def onEvent(self, time):
 		if (self.Play.checkClick()):
-			ps = PlayScene.PlayScene(director)
-			director.changeScene(ps)
+			self.director.changeScene(PlayScene.PlayScene(self.director))
 		if (self.HS.checkClick()):
 			print ("NOt Implementeds")
 	

@@ -3,6 +3,8 @@
 #
 
 import pygame, sys
+from pygame.locals import *
+
 
 def load_image(filename, transparent=False):
 	try: image = pygame.image.load(filename)

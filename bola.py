@@ -3,7 +3,7 @@ import pygame, graphic, config
 class Bola(pygame.sprite.DirtySprite):
 	def __init__(self):
 		pygame.sprite.DirtySprite.__init__(self)
-		self.image = graphic.load_image(config.images+"ball.png")
+		self.image = graphic.load_image(config.images+"ball.png", True)
 		self.rect = self.image.get_rect()
 		self.rect.centerx = config.width/2
 		self.rect.centery = config.height/2
